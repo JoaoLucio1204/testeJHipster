@@ -1,0 +1,46 @@
+{
+    "name": "Funcionario",
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cpf",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "dataNascimento",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "empresaContratado",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "empresa",
+            "otherEntityName": "empresa",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "funcionario"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "empresa",
+            "otherEntityName": "empresa",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180930233130",
+    "entityTableName": "funcionario",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

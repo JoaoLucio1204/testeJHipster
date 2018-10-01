@@ -1,0 +1,69 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-empresa-heading" jhiTranslate="testeJHipsterApp.empresa.home.createOrEditLabel">Create or edit a Empresa</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!empresa.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="empresa.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="testeJHipsterApp.empresa.cnpj" for="field_cnpj">Cnpj</label>
+                    <input type="number" class="form-control" name="cnpj" id="field_cnpj"
+                        [(ngModel)]="empresa.cnpj" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="testeJHipsterApp.empresa.razaoSocial" for="field_razaoSocial">Razao Social</label>
+                    <input type="text" class="form-control" name="razaoSocial" id="field_razaoSocial"
+                        [(ngModel)]="empresa.razaoSocial" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="testeJHipsterApp.empresa.nomeFantasia" for="field_nomeFantasia">Nome Fantasia</label>
+                    <input type="text" class="form-control" name="nomeFantasia" id="field_nomeFantasia"
+                        [(ngModel)]="empresa.nomeFantasia" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="testeJHipsterApp.empresa.nomeResponsavel" for="field_nomeResponsavel">Nome Responsavel</label>
+                    <input type="text" class="form-control" name="nomeResponsavel" id="field_nomeResponsavel"
+                        [(ngModel)]="empresa.nomeResponsavel" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="testeJHipsterApp.empresa.rua" for="field_rua">Rua</label>
+                    <input type="text" class="form-control" name="rua" id="field_rua"
+                        [(ngModel)]="empresa.rua" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="testeJHipsterApp.empresa.numero" for="field_numero">Numero</label>
+                    <input type="number" class="form-control" name="numero" id="field_numero"
+                        [(ngModel)]="empresa.numero" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="testeJHipsterApp.empresa.bairro" for="field_bairro">Bairro</label>
+                    <input type="text" class="form-control" name="bairro" id="field_bairro"
+                        [(ngModel)]="empresa.bairro" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="testeJHipsterApp.empresa.cidade" for="field_cidade">Cidade</label>
+                    <input type="text" class="form-control" name="cidade" id="field_cidade"
+                        [(ngModel)]="empresa.cidade" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="testeJHipsterApp.empresa.estado" for="field_estado">Estado</label>
+                    <input type="text" class="form-control" name="estado" id="field_estado"
+                        [(ngModel)]="empresa.estado" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

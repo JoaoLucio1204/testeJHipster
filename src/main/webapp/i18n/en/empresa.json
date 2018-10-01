@@ -1,0 +1,32 @@
+
+{
+    "testeJHipsterApp": {
+        "empresa" : {
+            "home": {
+                "title": "Empresas",
+                "createLabel": "Create a new Empresa",
+                "createOrEditLabel": "Create or edit a Empresa"
+            },
+            "created": "A new Empresa is created with identifier {{ param }}",
+            "updated": "A Empresa is updated with identifier {{ param }}",
+            "deleted": "A Empresa is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Empresa {{ id }}?"
+            },
+            "detail": {
+                "title": "Empresa"
+            },
+            "cnpj": "Cnpj",
+            "razaoSocial": "Razao Social",
+            "nomeFantasia": "Nome Fantasia",
+            "nomeResponsavel": "Nome Responsavel",
+            "rua": "Rua",
+            "numero": "Numero",
+            "bairro": "Bairro",
+            "cidade": "Cidade",
+            "estado": "Estado",
+            "funcionario": "Funcionario",
+            "funcionario": "Funcionario"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+entity Empresa {
+	cnpj Long
+    razaoSocial String
+    nomeFantasia String
+    nomeResponsavel String
+    rua String
+    numero Long
+    bairro String
+    cidade String
+    estado String
+    
+}
+
+entity Funcionario {
+	nome String
+    cpf Long
+    dataNascimento String
+    empresaContratado String
+}
+
+
+relationship OneToOne {
+	Funcionario to Empresa
+}
+
+relationship OneToMany {
+	Empresa to Funcionario
+}
+

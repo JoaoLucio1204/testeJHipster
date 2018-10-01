@@ -1,0 +1,65 @@
+{
+    "name": "Empresa",
+    "fields": [
+        {
+            "fieldName": "cnpj",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "razaoSocial",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomeFantasia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomeResponsavel",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rua",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numero",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "bairro",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cidade",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "estado",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "funcionario",
+            "otherEntityName": "funcionario",
+            "otherEntityRelationshipName": "empresa"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "funcionario",
+            "otherEntityName": "funcionario",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "empresa"
+        }
+    ],
+    "changelogDate": "20180930233129",
+    "entityTableName": "empresa",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="empresa">
+            <h2><span jhiTranslate="testeJHipsterApp.empresa.detail.title">Empresa</span> {{empresa.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="testeJHipsterApp.empresa.cnpj">Cnpj</span></dt>
+                <dd>
+                    <span>{{empresa.cnpj}}</span>
+                </dd>
+                <dt><span jhiTranslate="testeJHipsterApp.empresa.razaoSocial">Razao Social</span></dt>
+                <dd>
+                    <span>{{empresa.razaoSocial}}</span>
+                </dd>
+                <dt><span jhiTranslate="testeJHipsterApp.empresa.nomeFantasia">Nome Fantasia</span></dt>
+                <dd>
+                    <span>{{empresa.nomeFantasia}}</span>
+                </dd>
+                <dt><span jhiTranslate="testeJHipsterApp.empresa.nomeResponsavel">Nome Responsavel</span></dt>
+                <dd>
+                    <span>{{empresa.nomeResponsavel}}</span>
+                </dd>
+                <dt><span jhiTranslate="testeJHipsterApp.empresa.rua">Rua</span></dt>
+                <dd>
+                    <span>{{empresa.rua}}</span>
+                </dd>
+                <dt><span jhiTranslate="testeJHipsterApp.empresa.numero">Numero</span></dt>
+                <dd>
+                    <span>{{empresa.numero}}</span>
+                </dd>
+                <dt><span jhiTranslate="testeJHipsterApp.empresa.bairro">Bairro</span></dt>
+                <dd>
+                    <span>{{empresa.bairro}}</span>
+                </dd>
+                <dt><span jhiTranslate="testeJHipsterApp.empresa.cidade">Cidade</span></dt>
+                <dd>
+                    <span>{{empresa.cidade}}</span>
+                </dd>
+                <dt><span jhiTranslate="testeJHipsterApp.empresa.estado">Estado</span></dt>
+                <dd>
+                    <span>{{empresa.estado}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/empresa', empresa.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
